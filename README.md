@@ -1,62 +1,38 @@
-# MosDNS Web GUI (Development Version)
+# MosDNS Web GUI
 
-**Important Note:** This project is currently in its early stages of development and is not yet fully functional. Use with caution and expect potential bugs or incomplete features.
+MosDNS Web GUI is a program that provides a web interface for managing and interacting with MosDNS, a plugin-based DNS forwarder/traffic splitter.
 
-MosDNS Web GUI is a program that aims to provide a web interface for managing and interacting with MosDNS, a plugin-based DNS forwarder/traffic splitter. This project is a work in progress and currently offers basic functionalities.
+## Installation
 
-### Features (In Development)
-
-* Viewing and editing MosDNS configuration
-* Updating GeoIP and GeoSite data
-* Managing rule files (whitelists, blocklists, etc.)
-* Displaying MosDNS status and logs
-
-### Installation
-
-#### Prerequisites
+### Prerequisites
 
 * Go 1.13 or later
 * MosDNS installed and running
 
-#### Installation Steps
+### Installation steps
 
-1. Clone or download this repository to your local machine.
-2. Open a terminal and navigate to the project directory.
-3. Run the following command to build and run the program:
+1. Download the latest release of MosDNS Web GUI for your platform.
+2. Extract the downloaded archive.
+3. Run the installation script: `sudo ./install.sh`
 
-```
-go run cmd/mosdns-web-gui/main.go
-```
+## Usage
 
+1. After installation, run the program: `/usr/local/mosdns-web-gui/mosdns-web-gui`
+2. Access the web interface in your browser at `http://localhost:8080` (or the port you configured).
+3. Use the web interface to configure MosDNS, update Geo data, manage rules, view status, and check logs.
 
-4. Access the web interface in your browser at `http://localhost:8080` (or the port you configured).
+## Configuration
 
-**Note:** You might need to adjust configuration file paths and other settings in the code to match your specific environment.
+The program can be configured by editing the `mosdns.yaml` file located in the `config` directory within the installation directory. Please refer to the MosDNS documentation for details on the configuration options.
 
-### Usage
+## Testing
 
-The web interface provides sections for:
+The program has been tested on various Linux distributions. However, it's always recommended to test the installation and functionality on your specific system before deploying it in a production environment.
 
-* **Configuration:** View and edit MosDNS configuration options.
-* **Geo Data Update:** Trigger the update of GeoIP and GeoSite data files.
-* **Rule Management:** Add, edit, and delete rules for whitelists, blocklists, etc.
-* **Status:** View the current status of MosDNS.
-* **Logs:** View MosDNS logs and filter by log level.
+## Contributing
 
-### Testing
+Contributions are welcome! Please see the CONTRIBUTING.md file for details.
 
-This program has been successfully tested on macOS and Linux. However, it's always recommended to test the installation and functionality on your specific system before deploying it in a production environment.
+## License
 
-### Contributing
-
-Contributions are welcome! Please see the `CONTRIBUTING.md` file for details.
-
-### License
-
-MosDNS Web GUI is licensed under the GNU General Public License v3.0. Please see the `LICENSE` file for details.
-
-### Author
-
-This project is developed by [inabakumori](https://github.com/inabakumori).
-
-**Please note that this project is still under development and may not be suitable for production use yet.**
+MosDNS Web GUI is licensed under the GPLv3 license. Please see the LICENSE file for details.
